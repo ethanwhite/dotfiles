@@ -1,0 +1,7 @@
+[user]
+	name = Ethan White
+	email = ethan@weecology.org
+[alias]
+	st = status -sb
+[github]
+	user = ethanwhite
