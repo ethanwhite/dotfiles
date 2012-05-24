@@ -5,3 +5,5 @@
 	st = status -sb
 [github]
 	user = ethanwhite
+[color]
+	ui = true
