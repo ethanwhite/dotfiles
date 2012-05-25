@@ -7,3 +7,5 @@
 	user = ethanwhite
 [color]
 	ui = true
+[core]
+	editor = nano
