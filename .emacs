@@ -14,6 +14,10 @@
 ;; === Set the fill column to 80 ===
 (setq-default fill-column 80)
 
+;; === Enable markdown mode ===
 (autoload 'markdown-mode "markdown-mode"
    "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+;; === Copy/paste to/from external programs ===
+(setq x-select-enable-clipboard t)
