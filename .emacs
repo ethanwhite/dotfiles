@@ -1,6 +1,13 @@
 ;; === CUA Mode ===
  (cua-mode 1)
 
+;; === Add Marmalade package manage ===
+(require 'package)
+(add-to-list 'package-archives 
+    '("marmalade" .
+      "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
 ;; === Emacs for Python setup following https://github.com/gabrielelanaro/emacs-for-python
  (load-file "~/.emacs.d/emacs-for-python/epy-init.el")
  (add-to-list 'load-path "~.emacs.d/emacs-for-python/") ;; tell where to load the various files
