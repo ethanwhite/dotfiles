@@ -8,6 +8,9 @@
       "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
+;; === Solarized color theme
+(load-theme 'solarized-light t)
+
 ;; === Emacs for Python setup following https://github.com/gabrielelanaro/emacs-for-python
  (load-file "~/.emacs.d/emacs-for-python/epy-init.el")
  (add-to-list 'load-path "~.emacs.d/emacs-for-python/") ;; tell where to load the various files
