@@ -95,3 +95,6 @@ fi
 
 # set default editor to emacs
 export EDITOR=emacs
+
+# adding Drush to path
+PATH=$PATH:/home/ethan/Dropbox/Web/Drupal/drush
