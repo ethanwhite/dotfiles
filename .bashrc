@@ -45,9 +45,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w$(__git_ps1 " (%s)")\[\033[00m\]\$ '
 else
-    PS1='\u@\h:\w\$ '
+    PS1='\u@\h:\w$(__git_ps1 " (%s)")\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -98,3 +98,7 @@ export EDITOR=emacs
 
 # adding Drush to path
 PATH=$PATH:/home/ethan/Dropbox/Web/Drupal/drush
+
+# setup for git-prompt following https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
+source ~/.git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=yes
