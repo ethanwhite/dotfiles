@@ -21,8 +21,9 @@
  ;; (require 'epy-bindings)   ;; For my suggested keybindings [optional]
  (require 'epy-nose)       ;; For nose integration
 
-;; === Set the fill column to 80 ===
+;; === Set fill defaults ===
 (setq-default fill-column 80)
+(add-hook 'text-mode-hook 'auto-fill-mode)
 
 ;; === Enable markdown mode ===
 (autoload 'markdown-mode "markdown-mode"
@@ -31,3 +32,6 @@
 
 ;; === Copy/paste to/from external programs ===
 (setq x-select-enable-clipboard t)
+
+;; === Spell checking in text modes ===
+(add-hook 'text-mode-hook 'flyspell-mode)
