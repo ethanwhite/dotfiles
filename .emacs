@@ -5,6 +5,11 @@
 (require 'ido)
 (ido-mode t)
 
+;; === Autopair parenthese ===
+(add-to-list 'load-path "~/.emacs.d/elpa/autopair-0.3/") ;; comment if autopair.el is in standard load path 
+(require 'autopair)
+(autopair-global-mode) ;; enable autopair in all buffers
+
 ;; === Add Marmalade package manage ===
 (require 'package)
 (add-to-list 'package-archives 
