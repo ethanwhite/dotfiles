@@ -18,6 +18,7 @@
 ;; === Python setup following https://github.com/jorgenschaefer/elpy/wiki/Installation
 (elpy-enable)
 (elpy-use-ipython)
+(elpy-clean-modeline)
 
 ;; = Newline and indent =
 (add-hook 'python-mode-hook
