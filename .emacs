@@ -1,6 +1,10 @@
 ;; === CUA Mode ===
  (cua-mode 1)
 
+;; ===IDO Mode ===
+(require 'ido)
+(ido-mode t)
+
 ;; === Add Marmalade package manage ===
 (require 'package)
 (add-to-list 'package-archives 
