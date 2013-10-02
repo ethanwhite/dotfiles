@@ -10,6 +10,13 @@
 (require 'autopair)
 (autopair-global-mode) ;; enable autopair in all buffers
 
+;; = Allow triple quote pairing in Python
+(add-hook 'python-mode-hook
+          #'(lambda ()
+              (setq autopair-handle-action-fns
+                    (list #'autopair-default-handle-action
+                          #'autopair-python-triple-quote-action))))
+
 ;; === Add Marmalade package manage ===
 (require 'package)
 (add-to-list 'package-archives 
