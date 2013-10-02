@@ -19,6 +19,7 @@
 (elpy-enable)
 (elpy-use-ipython)
 (elpy-clean-modeline)
+(setq elpy-rpc-backend "jedi")
 
 ;; = Newline and indent =
 (add-hook 'python-mode-hook
