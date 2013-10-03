@@ -18,7 +18,7 @@
 (setq dim-packages
       (append
        ;; list of packages we use straight from official recipes
-       '(markdown-mode color-theme-solarized jedi autopair)
+       '(markdown-mode color-theme-solarized jedi autopair yasnippet)
 
        (mapcar 'el-get-as-symbol (mapcar 'el-get-source-name el-get-sources))))
 
@@ -30,6 +30,11 @@
 ;; ===IDO Mode ===
 (require 'ido)
 (ido-mode t)
+
+;; === Yasnippet ===
+(add-to-list 'load-path "~/.emacs.d/packages/yasnippet-x.y.z")
+(require 'yasnippet) ;; not yasnippet-bundle
+(yas-global-mode 1)
 
 ;; === Autopair parenthese ===
 (add-to-list 'load-path "~/.emacs.d/elpa/autopair-0.3/") ;; comment if autopair.el is in standard load path 
@@ -87,4 +92,8 @@
  python-shell-completion-string-code
    "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
 
+;; = Jedi autocompletion =
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:setup-keys t)                      ; optional
+(setq jedi:complete-on-dot t)                 ; optional
 
