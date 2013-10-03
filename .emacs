@@ -27,12 +27,6 @@
 ;; === Solarized color theme
 (load-theme 'solarized-light t)
 
-;; === Python setup following https://github.com/jorgenschaefer/elpy/wiki/Installation
-(elpy-enable)
-(elpy-use-ipython)
-(elpy-clean-modeline)
-(setq elpy-rpc-backend "jedi")
-
 ;; = Newline and indent =
 (add-hook 'python-mode-hook
   #'(lambda ()
