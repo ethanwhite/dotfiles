@@ -1,3 +1,29 @@
+;; === El-get package management ===
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+    (let (el-get-master-branch)
+      (goto-char (point-max))
+      (eval-print-last-sexp))))
+
+(el-get 'sync)
+
+(require 'el-get)
+(setq el-get-verbose t)
+
+;; my packages
+(setq dim-packages
+      (append
+       ;; list of packages we use straight from official recipes
+       '(markdown-mode color-theme-solarized jedi autopair)
+
+       (mapcar 'el-get-as-symbol (mapcar 'el-get-source-name el-get-sources))))
+
+(el-get 'sync dim-packages)
+
 ;; === CUA Mode ===
  (cua-mode 1)
 
