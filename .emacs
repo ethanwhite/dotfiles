@@ -18,7 +18,7 @@
 (setq dim-packages
       (append
        ;; list of packages we use straight from official recipes
-       '(markdown-mode color-theme-solarized jedi autopair yasnippet)
+       '(markdown-mode color-theme-solarized jedi flycheck autopair yasnippet)
 
        (mapcar 'el-get-as-symbol (mapcar 'el-get-source-name el-get-sources))))
 
@@ -97,3 +97,5 @@
 (setq jedi:setup-keys t)                      ; optional
 (setq jedi:complete-on-dot t)                 ; optional
 
+;; = Flycheck =
+(add-hook 'after-init-hook #'global-flycheck-mode)
