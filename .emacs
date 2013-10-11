@@ -99,3 +99,7 @@
 
 ;; = Flycheck =
 (add-hook 'after-init-hook #'global-flycheck-mode)
+
+;; = IPython Notebook integration =
+(require 'ein)
+(setq ein:use-auto-complete t)
