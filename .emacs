@@ -18,7 +18,7 @@
 (setq dim-packages
       (append
        ;; list of packages we use straight from official recipes
-       '(markdown-mode color-theme-solarized jedi flycheck autopair yasnippet ess)
+       '(markdown-mode color-theme-solarized jedi flycheck autopair yasnippet ess ein)
 
        (mapcar 'el-get-as-symbol (mapcar 'el-get-source-name el-get-sources))))
 
