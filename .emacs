@@ -106,3 +106,6 @@
 (require 'ein)
 (setq ein:use-auto-complete-superpack t)
 (add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
+
+;; = Prevent ESS from rewriting underscores as R assignment operators
+(ess-toggle-underscore nil)
