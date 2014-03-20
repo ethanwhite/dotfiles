@@ -79,6 +79,8 @@
 (add-hook 'text-mode-hook 'flyspell-mode)
 
 ;; === Python Setup ===
+(require 'python)
+
 ;; = IPython shell =
 (setq
  python-shell-interpreter "ipython"
@@ -102,4 +104,5 @@
 
 ;; = IPython Notebook integration =
 (require 'ein)
-(setq ein:use-auto-complete t)
+(setq ein:use-auto-complete-superpack t)
+(add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
