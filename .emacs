@@ -56,7 +56,7 @@
 (package-initialize)
 
 ;; === Solarized color theme
-(load-theme 'solarized-dark t)
+(load-theme 'solarized-light t)
 
 ;; = Newline and indent =
 (add-hook 'python-mode-hook
