@@ -108,7 +108,7 @@
 (add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
 
 ;; = Prevent ESS from rewriting underscores as R assignment operators
-(ess-toggle-underscore nil)
+;; (ess-toggle-underscore nil)
 
 ;; = Use Wind Move for Window navigation
 (when (fboundp 'windmove-default-keybindings)
