@@ -18,7 +18,7 @@
 (setq dim-packages
       (append
        ;; list of packages we use straight from official recipes
-       '(markdown-mode color-theme-solarized jedi flycheck autopair yasnippet ess ein magit)
+       '(markdown-mode color-theme-solarized jedi flycheck autopair yasnippet ess ein magit ace-window)
 
        (mapcar 'el-get-as-symbol (mapcar 'el-get-source-name el-get-sources))))
 
@@ -110,6 +110,5 @@
 ;; = Prevent ESS from rewriting underscores as R assignment operators
 ;; (ess-toggle-underscore nil)
 
-;; = Use Wind Move for Window navigation
-(when (fboundp 'windmove-default-keybindings)
-  (windmove-default-keybindings 'meta))
+;; = Use ace-window for indow navigation
+(global-set-key (kbd "M-p") 'ace-window)
