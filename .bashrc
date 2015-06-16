@@ -96,9 +96,6 @@ fi
 # set default editor to emacs
 export EDITOR=emacs
 
-# adding Drush to path
-PATH=$PATH:/home/ethan/Dropbox/Web/Drupal/drush
-
 # setup for git-prompt following https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 source ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=yes
