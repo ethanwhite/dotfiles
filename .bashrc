@@ -99,3 +99,7 @@ export EDITOR=emacs
 # setup for git-prompt following https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 source ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=yes
+
+# Add anaconda to PATH
+PATH=/home/ethan/anaconda/bin:$PATH
+export PATH
