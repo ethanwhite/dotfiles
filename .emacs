@@ -18,7 +18,7 @@
 (setq dim-packages
       (append
        ;; list of packages we use straight from official recipes
-       '(markdown-mode color-theme-solarized jedi flycheck autopair yasnippet ess ein magit ace-window)
+       '(markdown-mode color-theme-solarized jedi flycheck autopair yasnippet ess ein magit ace-window projectile)
 
        (mapcar 'el-get-as-symbol (mapcar 'el-get-source-name el-get-sources))))
 
@@ -112,3 +112,6 @@
 
 ;; = Use ace-window for indow navigation
 (global-set-key (kbd "M-p") 'ace-window)
+
+;; = Projectile for project management
+(projectile-global-mode)
