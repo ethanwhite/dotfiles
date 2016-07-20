@@ -98,8 +98,13 @@
 (setq ein:use-auto-complete-superpack t)
 (add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
 
+;; ESS
+(require 'ess-site)
 ;; = Prevent ESS from rewriting underscores as R assignment operators
-;; (ess-toggle-underscore nil)
+(setq ess-S-assign-key (kbd "M--"))
+(ess-toggle-S-assign-key t) ; enable above key definition
+;; leave my underscore key alone!
+(ess-toggle-underscore nil) 
 
 ;; = Use ace-window for indow navigation
 (global-set-key (kbd "M-p") 'ace-window)
