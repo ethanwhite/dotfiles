@@ -110,3 +110,7 @@
 (use-package projectile
   :ensure    projectile
   :config    (projectile-global-mode t))
+
+;; = Magit =
+(use-package magit)
+(global-set-key (kbd "C-x C-g") 'magit-status)
