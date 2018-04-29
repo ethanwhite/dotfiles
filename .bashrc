@@ -100,6 +100,6 @@ export EDITOR=emacs
 source ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=yes
 
-# Add anaconda to PATH
-PATH=/home/ethan/anaconda/bin:$PATH
-export PATH
+# Link to conda
+. /home/ethan/miniconda3/etc/profile.d/conda.sh
+
