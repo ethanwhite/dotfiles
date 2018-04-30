@@ -109,7 +109,9 @@
 ;; (setq ess-S-assign-key (kbd "M--"))
 ;; (ess-toggle-S-assign-key t) ; enable above key definition
 ;; leave my underscore key alone!
-(ess-toggle-underscore nil)
+(add-hook 'ess-mode-hook
+          (lambda ()
+            (ess-toggle-underscore nil)))
 
 ;; = Projectile for project management
 (use-package projectile
